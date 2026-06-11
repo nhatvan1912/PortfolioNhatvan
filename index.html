@@ -140,6 +140,8 @@ section{padding:6rem 1.5rem;position:relative;z-index:1}
 .pl-yt{background:rgba(255,0,0,.1);border:1px solid rgba(255,0,0,.2);color:#ff5555}
 .pl-yt:hover{background:rgba(255,0,0,.2);color:#ff7777}
 .pl-soon{background:var(--card2);border:1px dashed var(--border2);color:var(--muted);font-family:var(--font-m);font-size:.72rem;cursor:default;padding:.4rem .85rem;border-radius:6px}
+.pl-gp{background:rgba(0,212,100,.08);border:1px solid rgba(0,212,100,.2);color:#00d464}
+.pl-gp:hover{background:rgba(0,212,100,.18);color:#00f070}
 
 /* ── EDUCATION ── */
 #education{background:var(--bg2)}
@@ -231,10 +233,7 @@ footer p{margin-top:.3rem;opacity:.6}
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navBtn" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -254,7 +253,7 @@ footer p{margin-top:.3rem;opacity:.6}
     <p class="hero-desc">Unity Developer passionate about crafting immersive game experiences — from top-down shooters to mobile games and playable ads.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-p">🎮 View Projects</a>
-      <a href="#contact" class="btn-o">📩 Contact Me</a>
+      <a href="#" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=nhatvan@gmail.com','mail','width=600,height=500,left=400,top=200');return false;" class="btn-o">📩 Contact Me</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -274,8 +273,7 @@ footer p{margin-top:.3rem;opacity:.6}
       <div class="rv left">
         <div class="photo-wrap">
           <div class="photo-box">
-            <span class="ph-icon">👾</span>
-            <span class="ph-txt">// photo.jpg</span>
+            <img src="photo.jpg" alt="Hoang Dinh Nhat Van">
           </div>
           <div class="photo-corner tl"></div>
           <div class="photo-corner br"></div>
@@ -314,6 +312,7 @@ footer p{margin-top:.3rem;opacity:.6}
           <span class="tag">Cocos2d-x</span>
           <span class="tag">Playable Ads</span>
           <span class="tag">2D Games</span>
+          <span class="tag">3D Games</span>
           <span class="tag">Mobile Games</span>
           <span class="tag">Top-Down Shooter</span>
         </div>
@@ -344,41 +343,6 @@ footer p{margin-top:.3rem;opacity:.6}
   </div>
 </section>
 
-<!-- ── EXPERIENCE ── -->
-<section id="experience">
-  <div class="container">
-    <div class="sec-head rv">
-      <h2 class="sec-title">Experience</h2>
-      <p class="sec-sub">Work History</p>
-    </div>
-    <div class="timeline">
-      <div class="tl-item rv">
-        <div class="exp-card">
-          <div class="exp-top">
-            <div>
-              <div class="exp-co">🦅 Falcon Game Studio</div>
-              <div class="exp-role">Unity Developer — Playable Ads</div>
-            </div>
-            <div class="exp-period">Nov 2024 — Sep 2025</div>
-          </div>
-          <ul class="exp-ul">
-            <li>Developed short games for advertising purposes (Playable Ads)</li>
-            <li>Worked with Unity and Cocos2d-x game engines</li>
-            <li>Completed tasks on time while maintaining strong team relationships</li>
-          </ul>
-          <div class="exp-tags">
-            <span class="etag">Unity</span>
-            <span class="etag">Cocos2d-x</span>
-            <span class="etag">C#</span>
-            <span class="etag">Playable Ads</span>
-            <span class="etag">Mobile</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── PROJECTS ── -->
 <section id="projects">
   <div class="container">
@@ -388,31 +352,6 @@ footer p{margin-top:.3rem;opacity:.6}
     </div>
     <div class="proj-grid">
 
-      <!-- WAR2DIE -->
-      <div class="proj-card rv">
-        <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0505,#2d0a0a)">
-          <div class="gi">🔫</div>
-          <span class="proj-badge badge-shooter">Top-Down Shooter</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">WAR2DIE</div>
-          <p class="proj-desc">Intense top-down shooter with dynamic combat mechanics. Battle through waves of enemies in fast-paced action gameplay.</p>
-          <div class="proj-tech">
-            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">2D</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/nhatvan1912/War2Die.git" target="_blank" class="plink pl-gh">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a href="https://youtu.be/FCmt9gaynMc" target="_blank" class="plink pl-yt">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
       <!-- DUNGEON SHOOTER -->
       <div class="proj-card rv">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#0a0518,#150a2d)">
@@ -421,30 +360,44 @@ footer p{margin-top:.3rem;opacity:.6}
         </div>
         <div class="proj-body">
           <div class="proj-name">DUNGEON SHOOTER</div>
-          <p class="proj-desc">Navigate dark, procedurally-styled dungeons and eliminate enemies. A shooter featuring dungeon-crawling mechanics and challenging encounters.</p>
+          <p class="proj-desc">Navigate procedurally-generated dungeons, fight enemies, collect loot, and survive boss encounters. A roguelike shooter built with advanced Unity systems and custom tooling.</p>
           <div class="proj-tech">
-            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">2D</span>
+            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">2D</span><span class="ptag">Procedural Gen</span>
           </div>
           <div class="proj-links">
-            <span class="pl-soon">🔗 Links coming soon</span>
+            <a href="https://github.com/nhatvan1912/DungeonShooter.git" target="_blank" class="plink pl-gh">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.youtube.com/watch?v=HIg1HKgfLj0&t=34s" target="_blank" class="plink pl-yt">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Demo
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- MOBILE MONSTER SHOOTER -->
+      <!-- EXTERMINATOR -->
       <div class="proj-card rv">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#051a08,#0a2d10)">
           <div class="gi">👾</div>
-          <span class="proj-badge badge-mobile">Mobile</span>
+          <span class="proj-badge badge-shooter">Mobile Shooter</span>
         </div>
         <div class="proj-body">
-          <div class="proj-name">MONSTER SHOOTER</div>
-          <p class="proj-desc">Action-packed mobile shooter — battle waves of monsters with touch-optimized controls. Fast-paced gameplay built for Android.</p>
+          <div class="proj-name">EXTERMINATOR</div>
+          <p class="proj-desc">Mobile shooter featuring Behaviour Tree AI for enemies — battle waves of monsters with touch-optimized controls built for Android.</p>
           <div class="proj-tech">
-            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">Mobile</span><span class="ptag">Android</span>
+            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">3D</span><span class="ptag">Mobile</span><span class="ptag">Android</span><span class="ptag">Behaviour Tree</span>
           </div>
           <div class="proj-links">
-            <span class="pl-soon">🔗 Links coming soon</span>
+            <a href="https://github.com/nhatvan1912/Exteminator.git" target="_blank" class="plink pl-gh">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.youtube.com/watch?v=sHDMWM7Vk64" target="_blank" class="plink pl-yt">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Demo
+            </a>
           </div>
         </div>
       </div>
@@ -469,6 +422,27 @@ footer p{margin-top:.3rem;opacity:.6}
             <a href="https://youtu.be/9tiBA93AUvA" target="_blank" class="plink pl-yt">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCK MATCH BLAST -->
+      <div class="proj-card rv">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1528,#0d2045)">
+          <div class="gi">💎</div>
+          <span class="proj-badge badge-puzzle">Puzzle</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">BLOCK MATCH BLAST</div>
+          <p class="proj-desc">Mobile puzzle game — match and blast colorful blocks in addictive levels. Contributed to development at Falcon Game Studio.</p>
+          <div class="proj-tech">
+            <span class="ptag">Unity</span><span class="ptag">C#</span><span class="ptag">Mobile</span><span class="ptag">Android</span><span class="ptag">Puzzle</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=com.fc.p.ptit.block.match.blast.puzzle" target="_blank" class="plink pl-gp">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.2l12.5-12.5L13.5 8.4 3.18 23.76zm17.16-10.54L17.6 11.6l-3.5 3.5 3.5 3.5 2.77-1.56c.79-.45.79-1.58-.03-2.02zM3.07.24C2.72.2 2.38.27 2.08.44L13.5 11.86l3.07-3.07L3.07.24zm.11 1.12l10.1 10.1-10.1 10.1V1.36z"/></svg>
+              Google Play
             </a>
           </div>
         </div>
@@ -503,64 +477,8 @@ footer p{margin-top:.3rem;opacity:.6}
   </div>
 </section>
 
-<!-- ── EDUCATION ── -->
-<section id="education">
-  <div class="container">
-    <div class="sec-head rv">
-      <h2 class="sec-title">Education</h2>
-      <p class="sec-sub">Academic Background</p>
-    </div>
-    <div class="edu-card rv">
-      <div class="edu-top">
-        <div class="edu-school">Posts and Telecommunications Institute of Technology (PTIT)</div>
-        <div class="edu-period">Oct 2022 — Present</div>
-      </div>
-      <div class="edu-details">
-        <div class="edu-d">
-          <span class="edu-dl">Specialization</span>
-          <span class="edu-dv">Software Engineering</span>
-        </div>
-        <div class="edu-d">
-          <span class="edu-dl">Current GPA</span>
-          <span class="edu-dv gpa">3.2 / 4.0</span>
-        </div>
-        <div class="edu-d">
-          <span class="edu-dl">Status</span>
-          <span class="edu-dv active">In Progress</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CERTIFICATES ── -->
-<section id="certificates">
-  <div class="container">
-    <div class="sec-head rv">
-      <h2 class="sec-title">Certificates</h2>
-      <p class="sec-sub">Achievements &amp; Awards</p>
-    </div>
-    <div class="certs-grid">
-      <div class="cert-card rv">
-        <div class="cert-ic">🏆</div>
-        <div>
-          <div class="cert-name">TOEIC Certificate</div>
-          <div class="cert-det">Score: 710 &middot; 2023</div>
-        </div>
-      </div>
-      <div class="cert-card rv">
-        <div class="cert-ic">🎮</div>
-        <div>
-          <div class="cert-name">Global Game Jam</div>
-          <div class="cert-det">Participant &middot; 2025</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── CONTACT ── -->
-<section id="contact">
+<!-- <section id="contact">
   <div class="container">
     <div class="sec-head rv">
       <h2 class="sec-title">Contact</h2>
@@ -603,7 +521,7 @@ footer p{margin-top:.3rem;opacity:.6}
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- ── FOOTER ── -->
 <footer>
